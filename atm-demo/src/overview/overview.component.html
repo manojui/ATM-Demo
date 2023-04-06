@@ -1,26 +1,24 @@
-<div class="container mt-5 mb-5">
-    <h2>ATM MACHINE NOTES DISPENSER COUNTER</h2>
-    <table class="table table-striped table-bordered">
+<div class="container mt-6 mb-6">
+    <h2 style="margin-left: 80PX;">ATM MACHINE NOTES DISPENSER COUNTER</h2>
+    <table style="border-width: 12px;">
         <thead class="bg-primary">
-        <tr>
-            <th>1 Note</th>
-            <th>5 Note</th>
-            <th>10 Note</th>
-            <th>20 Note</th>
-            <th>50 Note</th>
-            <th>100 Note</th>
-            <th>Take Cash</th>
+        <tr style="background-color:bisque;">
+            <th style="padding: 20px;">$1</th>
+            <th style="padding: 20px;">$5</th>
+            <th style="padding: 20px;">$10</th>
+            <th style="padding: 20px;">$20</th>
+            <th style="padding: 20px;">$50</th>
+            <th style="padding: 20px;">$100</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>{{oneNotesDispensed}}</td>
-            <td>{{fiveNotesDispensed}}</td>
-            <td>{{tenNotesDispensed}}</td>
-            <td>{{twentyNotesDispensed}}</td>
-            <td>{{fiftyNotesDispensed}}</td>
-            <td>{{hundredNotesDispensed}}</td>
-            <td><div *ngIf="hundredNotesDispansed != null "><button  class="btn btn-outline-success">Collect Cash</button></div></td>
+        <tr style="background-color: burlywood;">
+            <td style="padding: 40px;">{{oneNotesDispensed}}</td>
+            <td style="padding: 40px;">{{fiveNotesDispensed}}</td>
+            <td style="padding: 40px;">{{tenNotesDispensed}}</td>
+            <td style="padding: 40px;">{{twentyNotesDispensed}}</td>
+            <td style="padding: 40px;">{{fiftyNotesDispensed}}</td>
+            <td style="padding: 40px;">{{hundredNotesDispensed}}</td>
         </tr>
         </tbody>
     </table>

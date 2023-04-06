@@ -9,33 +9,6 @@ import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 })
 export class RestockComponent {
 
- amount: number = 55;
 
-  constructor(private fb: FormBuilder ) {
-      this.createForm();
-  }
-
-  createForm() {
-      this.withdrawalForm = this.fb.group({
-          amount: ['', Validators.required ]
-      });
-
-  }
-
-  withdrawalForm = new FormGroup ({
-      amount: new FormControl()
-
-  });
-
-
-
-
-
-
-
-
-
-
-
-
+  constructor(private fb: FormBuilder ) { }
 }
