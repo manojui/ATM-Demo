@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-withdrawl',
@@ -6,8 +7,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./withdrawl.component.sass']
 })
 export class WithdrawlComponent {
-
-  
-
-
 }
