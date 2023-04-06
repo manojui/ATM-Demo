@@ -7,4 +7,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./withdrawl.component.sass']
 })
 export class WithdrawlComponent {
+
+  isDisabled = true;
+  
 }
