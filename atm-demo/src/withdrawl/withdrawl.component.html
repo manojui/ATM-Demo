@@ -11,7 +11,7 @@
 
 
 
-<form [formGroup]="withdrawForm" (submit)="processWithdrawl()" class="atm-withdraw">
+<form  (submit)="processWithdrawl()" class="atm-withdraw">
     <h3 class='page-header'>Withdraw from the ATM</h3>
     <div class='withdraw-success' *ngIf='withdrawlSuccessFull !== null && withdrawlSuccessFull'>Dispensed {{withdrawlAmount}}</div>
     <div class='withdraw-fail' *ngIf='withdrawlSuccessFull !== null && !withdrawlSuccessFull'>Insufficient Funds</div>

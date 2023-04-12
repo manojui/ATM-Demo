@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Currency } from '../../interface/currency.interface';
-import { CurrencyValue } from '../../enum/currency-value.enum';
+ import { BehaviorSubject, Observable } from 'rxjs';
+import { Currency } from '../interface/currency.interface';
+import { CurrencyValue } from '../enum/currency-value.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { CurrencyValue } from '../../enum/currency-value.enum';
 export class AtmStateService {
 
   private _currentStock: Currency[] = [];
-  private _behaviorSubject: BehaviorSubject<Currency[]> = new BehaviorSubject(null);
+  private _behaviorSubject: BehaviorSubject<Currency[]> = new BehaviorSubject<string>();
 
   constructor() { 
     this._currentStock = [
@@ -21,10 +21,10 @@ export class AtmStateService {
       { value: CurrencyValue[CurrencyValue.dollar], display: 1, amount: 10 }
     ];
 
-    this._behaviorSubject.next(this._currentStock);
+     this._behaviorSubject.next(this._currentStock);
   }
 
-  public getCurrentStock(): Observable<Currency[]> { return this._behaviorSubject.asObservable(); } 
+   public getCurrentStock(): Observable<Currency[]> { return this._behaviorSubject.asObservable(); } 
 
   public addStock(currencyValue: CurrencyValue, amount: number): boolean {
     this._currentStock[currencyValue].amount += amount;
